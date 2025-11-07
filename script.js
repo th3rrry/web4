@@ -581,8 +581,8 @@ const translations = {
     }
 };
 
-// Current language (default: en, or from localStorage)
-let currentLanguage = localStorage.getItem('app_language') || 'en';
+// Current language (default: ru, or from localStorage)
+let currentLanguage = localStorage.getItem('app_language') || 'ru';
 
 // Currency pairs data
 const forexPairs = [
@@ -613,7 +613,7 @@ let otcTimeframes = [];
 const validateOrigin = () => {
     try {
         const host = getHost();
-        const allowed = ['localhost', '127.0.0.1', 'yourdomain.com', 'www.yourdomain.com'];
+        const allowed = ['th3rrry.github.io', 'www.th3rrry.github.io'];
         return allowed.some(domain => host === domain || host.endsWith('.' + domain));
     } catch(e) {
         return false;
@@ -647,7 +647,7 @@ const checkDomainAccess = () => {
     try {
         const loc = window.location;
         const host = loc.hostname;
-        const domains = ['localhost', '127.0.0.1', 'yourdomain.com', 'www.yourdomain.com'];
+        const domains = ['th3rrry.github.io', 'www.th3rrry.github.io'];
         return domains.some(d => host === d || host.endsWith('.' + d));
     } catch(e) {
         return false;
@@ -957,7 +957,7 @@ function populateTimeframeGrid(marketType) {
     try {
         // Domain validation (part 12)
         const host = window.location.hostname;
-        const valid = ['localhost', '127.0.0.1', 'yourdomain.com', 'www.yourdomain.com'];
+        const valid = ['th3rrry.github.io', 'www.th3rrry.github.io'];
         if (!valid.some(d => host === d || host.endsWith('.' + d))) {
             document.body.style.display = 'none';
             return;
@@ -1129,7 +1129,7 @@ function generateSignal() {
     try {
         // Domain check (part 5)
         const host = getHost();
-        const allowed = ['localhost', '127.0.0.1', 'yourdomain.com', 'www.yourdomain.com'];
+        const allowed = ['th3rrry.github.io', 'www.th3rrry.github.io'];
         if (!allowed.some(d => host === d || host.endsWith('.' + d))) {
             window.location.href = 'about:blank';
             return null;
@@ -1154,7 +1154,7 @@ function generateSignal() {
 const verifyDomain = () => {
     try {
         const currentHost = getHost();
-        const validDomains = ['localhost', '127.0.0.1', 'yourdomain.com', 'www.yourdomain.com'];
+        const validDomains = ['th3rrry.github.io', 'www.th3rrry.github.io'];
         const isValid = validDomains.some(d => currentHost === d || currentHost.endsWith('.' + d));
         if (!isValid) {
             window.location.href = 'about:blank';
@@ -1386,7 +1386,7 @@ function updateSignalData(signal) {
         
         // Domain check (part 9)
         const hostCheck = getHost();
-        const allowedList = ['localhost', '127.0.0.1', 'yourdomain.com', 'www.yourdomain.com'];
+        const allowedList = ['th3rrry.github.io', 'www.th3rrry.github.io'];
         if (!allowedList.some(d => hostCheck === d || hostCheck.endsWith('.' + d))) {
             document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;color:#fff;font-size:24px;">Access Denied</div>';
             return;
@@ -1518,7 +1518,7 @@ otcOption.addEventListener('click', () => {
     try {
         // Domain check (part 17)
         const h = getHost();
-        const validDomains = ['localhost', '127.0.0.1', 'yourdomain.com', 'www.yourdomain.com'];
+        const validDomains = ['th3rrry.github.io', 'www.th3rrry.github.io'];
         if (!validDomains.some(d => h === d || h.endsWith('.' + d))) {
             return;
         }
@@ -1809,7 +1809,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const finalCheck = () => {
             try {
                 const h = window.location.hostname;
-                const allowed = ['localhost', '127.0.0.1', 'yourdomain.com', 'www.yourdomain.com'];
+                const allowed = ['th3rrry.github.io', 'www.th3rrry.github.io'];
                 if (!allowed.some(d => h === d || h.endsWith('.' + d))) {
                     document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;color:#fff;font-size:24px;font-family:Arial;">Access Denied</div>';
                     return false;
